@@ -33,7 +33,7 @@ main {
   width: 90%;
   margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   color: #545149;
   padding: 10px;
 }
