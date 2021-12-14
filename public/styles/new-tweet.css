@@ -1,0 +1,7 @@
+new-tweet {
+  background-color: #f4f1ec;
+  display: flex;
+  justify-content: center;
+  font-family: Source Sans Pro, sans-serif;
+  border-bottom: solid;
+}
