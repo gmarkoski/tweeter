@@ -24,16 +24,19 @@ body {
   font-style: Source Sans Pro;
   font-weight: 400;
   font-family: Source Sans Pro, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }  
 
-.container {
+main {
   width: 90%;
-  position: relative;
-  background-color: #f4f1ec;
+  margin: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
-}  
+  color: #545149;
+  padding: 10px;
+}
   
 
 /*
