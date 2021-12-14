@@ -26,15 +26,16 @@ body {
   font-family: Source Sans Pro, sans-serif;
 }  
 
-main {
+.container {
   width: 90%;
+  position: relative;
   background-color: #f4f1ec;
   display: flex;
   justify-content: center;
-  margin: auto;
+  align-items: center;
+}  
   
-  
-}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
