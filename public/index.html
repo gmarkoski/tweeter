@@ -20,13 +20,16 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
-
+    
+    
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -44,7 +47,7 @@
       </div>
       <br>
       <div>
-          <h2><b>Gary</b> Markoski</h2>
+          <h2><b>Gary</b> M.</h2>
       </div>
     </header>
 
@@ -55,11 +58,14 @@
         <form method="POST" action="/tweets/">
           <label for="tweet-text"></label>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div>
+          <div class="form-footer">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="tweets">
+        
       </section>
     </main>
   <body>

@@ -26,19 +26,24 @@ form {
 /* styling for the counter */
 .counter {
   font-family: Bungee;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 /* styling for the new tweet text area */
 textarea {
   width: 100%;
-  display: flex;
-  justify-content: stretch;
   margin-top: 15px;
   margin-bottom: 15px;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #545149;
+}
+/* style the 140 counter*/
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+
+}
+/* style the negative characters*/
+.negative-num {
+  color: red;
 }
