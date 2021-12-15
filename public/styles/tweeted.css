@@ -1,6 +1,33 @@
-.tweeted {
-  box-sizing: border-box;
+.tweeted-container {
+  border: 3px solid #545149 ;
+  width: 100%;
   background-color: #f4f1ec;
   color: #545149;
+}
+.tweeted-container:hover {
+  box-shadow: 4px 4px 2px #545149;
+}
+.section {
+  border: 3px solid #545149
+}
+
+.tweeted-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.icons {
+  width: 150px;
+  display: flex;
+  justify-content: space-evenly;
   
+}
+.icons .fas {
+  color: #4056A1;
+}
+
+.icons .fas:hover {
+  color: rgba(167, 144, 14, 0.383);
 }

@@ -21,7 +21,6 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-style: Source Sans Pro;
   font-weight: 400;
   font-family: Source Sans Pro, sans-serif;
   display: flex;
@@ -32,12 +31,12 @@ body {
 main {
   width: 90%;
   margin: auto;
-  display: flex;
-  justify-content: flex-start;
   color: #545149;
   padding: 10px;
+  justify-content: flex-end;
 }
-  
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
