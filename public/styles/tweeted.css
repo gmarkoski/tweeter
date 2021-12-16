@@ -1,25 +1,25 @@
-.tweeted-container {
+.tweet {
   border: 3px solid #545149 ;
   width: 100%;
   background-color: #f4f1ec;
   color: #545149;
+  margin-bottom: 15px;
 }
-.tweeted-container:hover {
+.tweet:hover {
   box-shadow: 4px 4px 2px #545149;
 }
-.tweeted-header {
+.tweet-header {
   font-weight: 100;
   display: flex;
   justify-content: space-between;
   padding: 15px;
 }
-.tweeted-section {
+.tweet-section {
   border-bottom: 2px solid #545149; 
   width: 98%;
-  
   margin: auto;
 }
-.tweeted-footer {
+.tweet-footer {
   width: 100%;
   display: flex;
   justify-content: space-between; 

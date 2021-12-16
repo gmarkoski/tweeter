@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -27,6 +26,7 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -43,7 +43,7 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-    <header>
+    <header class="nav-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -66,24 +66,7 @@
           </div>
         </form>
       </section>
-      <section>           
-        <article class="tweeted-container">
-          <article class="tweeted-header">
-            <h4>Descarte </h4>
-            <h4>@rd</h4>
-          </article>
-          <section class="tweeted-section">
-            <p> Je pense, donc je suis!</p>              
-          </section>
-          <article class="tweeted-footer">
-            <p>timestamp</p>   
-            <p class="icons">
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-retweet"></i>
-              <i class="fas fa-heart"></i>
-            </p> 
-          </article>
-        </article>
+      <section id="tweet-container">
       </section>
     </main>
   <body>
