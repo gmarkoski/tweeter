@@ -5,9 +5,10 @@
  */
 // const $tweet = $(`<article class="tweet">Hello world</article>`);
 
-// Fake data taken from initial-tweets.json
-$(()=> {
 
+$("form").submit(function(event) {
+  event.preventDefault();
+  
   const data = [
     {
       "user": {
@@ -64,8 +65,8 @@ $(()=> {
   return $tweet;
   };
   renderTweets(data);
-
 });  
+
 // const $tweet = createTweetElement(tweetData);
 //renderTweets(data);
  //console.log($tweet); // to see what it looks like
