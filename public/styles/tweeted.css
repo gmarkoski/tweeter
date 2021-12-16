@@ -7,10 +7,15 @@
 .tweeted-container:hover {
   box-shadow: 4px 4px 2px #545149;
 }
-.section {
-  border: 3px solid #545149
+.tweeted-header {
+  font-weight: 100;
+  justify-content: space-between;
+  padding: 15px;
 }
-
+.tweeted-section {
+  border-bottom: 2px solid #545149; 
+  padding: 15px;
+}
 .tweeted-footer {
   width: 100%;
   display: flex;
