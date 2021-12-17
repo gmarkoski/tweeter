@@ -3,37 +3,36 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const $tweet = $(`<article class="tweet">Hello world</article>`);
 
+$("document").ready(function() {
 
-$("form").submit(function(event) {
-  event.preventDefault();
-  
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-
+  const loadTweets = function() {
+    $.ajax("/tweets", {
+      method: 'GET',
+    })
+      .then(
+        (tweets) => {
+          renderTweets(tweets);
+        }
+      );
+  };
+    
+  $('#newTweetForm').submit(function(event) {
+    event.preventDefault();
+    console.log($(this).serialize());
+   
+    $.ajax("/tweets", {
+      method : 'POST',
+      data : $(this).serialize()
+      
+    })
+      .then(function() {
+        console.log("tweet loaded");
+        loadTweets();
+      });
+     $("form").trigger("reset");
+    //  $("#tweet-text").empty();
+  });
 
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
@@ -64,10 +63,6 @@ $("form").submit(function(event) {
 
   return $tweet;
   };
-  renderTweets(data);
-});  
-
-// const $tweet = createTweetElement(tweetData);
-//renderTweets(data);
- //console.log($tweet); // to see what it looks like
-// $('#tweet-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  // renderTweets(data);
+ loadTweets();
+});
