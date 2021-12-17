@@ -22,32 +22,37 @@ $("document").ready(function() {
     console.log($(this).serialize());
 
     const length = $("#tweet-text").val().length;
-
+    const error = $(".error-message");
+        
     if (!length) {
-      return alert("Your tweet cannot be empty.");
-    }
-    if (length > 140) {
-      return alert("Your tweet is too long, reduce to 140 characters.");
-    }
-   
-    $.ajax("/tweets", {
-      method : 'POST',
-      data : $(this).serialize()
+      error.text("Your tweet cannot be empty.").slideDown();
+    } else if (length > 140) {
+      error.text("Your tweet is too long, reduce to a maximum of 140 characters.").slideDown();
+        
+    } else {
+      error.text('');
       
-    })
-      .then(function() {
-        console.log("tweet loaded");
-        loadTweets();
-      });
-    $("form").trigger("reset");
-  });
+      $.ajax("/tweets", {
+        method : 'POST',
+        data : $(this).serialize()
+      })
+        .then(function() {
+          console.log("tweet loaded");
+          loadTweets();
+        });
 
+      $("form").trigger("reset");
+        
+    };
+  });
+    
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       let $tweet = createTweetElement(tweet);
       $("#tweet-container").prepend($tweet);
     }
   };
+  
 
   function createTweetElement (tweet) {
     const $tweet = $(`
@@ -57,7 +62,7 @@ $("document").ready(function() {
     <h4>${tweet.user.handle}</h4>
   </header>      
   <section class="tweet-section">
-    <p>${tweet.content.text}</p>              
+    <p>${escape(tweet.content.text)}</p>              
   </section>
   <footer class="tweet-footer">
     <p>${timeago.format(tweet.created_at)}</p>   
@@ -71,6 +76,11 @@ $("document").ready(function() {
 
   return $tweet;
   };
-  // renderTweets(data);
- loadTweets();
+  
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  loadTweets();
 });
