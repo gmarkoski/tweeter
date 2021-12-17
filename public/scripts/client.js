@@ -20,6 +20,15 @@ $("document").ready(function() {
   $('#newTweetForm').submit(function(event) {
     event.preventDefault();
     console.log($(this).serialize());
+
+    const length = $("#tweet-text").val().length;
+
+    if (!length) {
+      return alert("Your tweet cannot be empty.");
+    }
+    if (length > 140) {
+      return alert("Your tweet is too long, reduce to 140 characters.");
+    }
    
     $.ajax("/tweets", {
       method : 'POST',
@@ -30,14 +39,13 @@ $("document").ready(function() {
         console.log("tweet loaded");
         loadTweets();
       });
-     $("form").trigger("reset");
-    //  $("#tweet-text").empty();
+    $("form").trigger("reset");
   });
 
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       let $tweet = createTweetElement(tweet);
-      $("#tweet-container").append($tweet);
+      $("#tweet-container").prepend($tweet);
     }
   };
 
