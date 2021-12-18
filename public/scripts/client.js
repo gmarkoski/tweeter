@@ -43,7 +43,7 @@ $("document").ready(function() {
 
       $("form").trigger("reset");
         
-    };
+    }
   });
     
   const renderTweets = function(tweets) {
@@ -54,13 +54,16 @@ $("document").ready(function() {
   };
   
 
-  function createTweetElement (tweet) {
+  const createTweetElement = function(tweet) {
     const $tweet = $(`
     <article class="tweet">
     <header class="tweet-header">
-    <h4>${tweet.user.name}</h4>
+    <div>
+      <img src = "${tweet.user.avatars}" class="new-pic" />
+        <p id="name2"> ${tweet.user.name}</p>
+    </div>  
     <h4>${tweet.user.handle}</h4>
-  </header>      
+  </header>
   <section class="tweet-section">
     <p>${escape(tweet.content.text)}</p>              
   </section>
@@ -74,7 +77,7 @@ $("document").ready(function() {
   </footer>
   </article>`);
 
-  return $tweet;
+    return $tweet;
   };
   
   const escape = function(str) {

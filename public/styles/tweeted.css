@@ -1,3 +1,5 @@
+/* styling for past tweets */
+
 .tweet {
   border: 3px solid #545149 ;
   width: 100%;
@@ -11,9 +13,22 @@
 .tweet-header {
   font-weight: 100;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 15px;
+  padding: 10px;
 }
+
+.tweet-header h4 {
+  margin-top: 18px;
+}
+#name2 {
+  display: inline-flex;
+  align-content: flex-start;
+  margin-top: 0;
+  line-height: 29px;
+  vertical-align: text-bottom;
+}
+
 .tweet-section {
   border-bottom: 2px solid #545149; 
   width: 98%;
@@ -39,3 +54,4 @@
 .icons .fas:hover {
   color: rgba(167, 144, 14, 0.383);
 }
+

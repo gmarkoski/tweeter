@@ -15,8 +15,6 @@ html {
 /*
  * Global layout stuff
  */ 
-
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -34,7 +32,7 @@ main {
   color: #545149;
   padding: 10px;
   justify-content: flex-end;
-}
+  }
 
 
 
