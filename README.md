@@ -6,8 +6,9 @@ This repository is the code for the project:  It was created build upon to pract
 
 ## Final Project
 
-!["screenshot description"] (https://github.com/gmarkoski/tweeter/blob/master/docs/Tweeter_Desktop_view.jpg)
-!["screenshot description"] (https://github.com/gmarkoski/tweeter/blob/master/docs/Tweeter_Narrow_view.jpg)
+!["screenshot description"](https://github.com/gmarkoski/tweeter/blob/master/docs/Tweeter_Desktop_view.jpg)
+
+!["screenshot description"](https://github.com/gmarkoski/tweeter/blob/master/docs/Tweeter_Narrow_view.jpg)
 
 
 ### Dependencies
